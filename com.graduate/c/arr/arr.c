@@ -6,11 +6,25 @@
 
 void getArrSize();
 
+void demo1();
+
 int main(void) {
 //    getArrSize();
-    // 练习：十只小猪称体重 定义一个数组 存储小猪体重  通过遍历找到最重的小猪   找到数组中数据最大值的下标     根据下标打印数据
-
+    demo1();
     return 0;
+}
+
+void demo1() {// 练习：十只小猪称体重 定义一个数组 存储小猪体重  通过遍历找到最重的小猪   找到数组中数据最大值的下标     根据下标打印数据
+    int arr[5] = {2,5,6,1,9};
+    int max = arr[0];
+    int maxIndex = 0;
+    for (int i = 0; i < 5; ++i) {
+        if (max < arr[i]){
+            max = arr[i];
+            maxIndex = i;
+        }
+    }
+    printf("index = %d, value = %d", maxIndex, max);
 }
 
 /**
